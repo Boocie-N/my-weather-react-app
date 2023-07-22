@@ -1,28 +1,35 @@
 .Weather {
-  border: 1px solid #dadde1;
+  border: 1px solid #a4a5a6;
   max-width: 600px;
   padding: 20px;
   border-radius: 10px;
   margin-top: 4em;
-  background: rgba(242, 217, 202, 0.437);
+
+  
 }
+.Weather .btn {
+  background: #813da0;
+  font-size: 16px;
+  border: none;
+}
+
 .Weather .city-name {
   font-size: 40px;
   font-weight: 400;
   line-height: 144px;
   padding-top: 0px;
   text-align: right;
-  color: blue;
+  color: rgb(29, 25, 20);
 }
 
 .Weather .current-weather-icon {
-  height: 40px;
-  margin-right: 5px;
+  height: 100px;
+  margin-right: 0px;
   margin-top: -15px;
 }
 
 .Weather h3 {
-    color: aqua;
+    color: rgb(23, 22, 18);
     margin-top: 30px;
     font-size: 70px;
     font-weight: 400;
@@ -48,7 +55,7 @@ list-style: none;
 }
 
 .Weather .units {
-   color: pink;
+   color: rgb(97, 29, 114);
    position: relative;
   top: -34px;
 }
