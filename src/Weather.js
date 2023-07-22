@@ -65,7 +65,7 @@ function Weather(props) {
     );
   } else {
     searchCity();
-    return "Loading...";
+    return "Loading Weather...";
   }
 }
 
