@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import CurrentDate from "./CurrentDate";
 import "./Weather.css";
 
 function Weather(props) {
@@ -14,7 +15,7 @@ function Weather(props) {
       wind: response.data.wind.speed,
       iconUrl: response.data.condition.icon_url,
       city: response.data.city,
-      date: "15:34, Sat Jul 21",
+      date: new Date(response.data.time * 1000),
     });
   }
 
@@ -49,7 +50,9 @@ function Weather(props) {
             <span className="city-name">{weatherInfo.city}</span>
 
             <ul>
-              <li>{weatherInfo.date}</li>
+              <li>
+                <CurrentDate date={weatherInfo.date} />
+              </li>
               <li className="text-capitalize">{weatherInfo.description}</li>
             </ul>
           </div>

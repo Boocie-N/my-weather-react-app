@@ -17,7 +17,7 @@ function App() {
             {" "}
             Boocie{" "}
           </a>{" "}
-          and is open-sourced on{" "}
+          , with loads of ☕ and is open-sourced on{" "}
           <a
             href="https://github.com/Boocie-N/my-weather-react-app"
             target="_blank"
