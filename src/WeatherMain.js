@@ -1,5 +1,6 @@
 import React from "react";
 import CurrentDate from "./CurrentDate";
+import WeatherTemp from "./WeatherTemp";
 
 function WeatherMain(props) {
   return (
@@ -21,10 +22,8 @@ function WeatherMain(props) {
           </ul>
         </div>
         <div className="col-6">
-          <h3>
-            {Math.round(props.data.temperature)}
-            <span className="units">°C | °F</span>
-          </h3>
+          <WeatherTemp celc={props.data.temperature} />
+
           <ul>
             <li>Humidity: {props.data.humidity}%</li>
             <li>Wind: {props.data.wind}km/h</li>
