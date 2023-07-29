@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import WeatherMain from "./WeatherMain";
+import WeatherForecast from "./WeatherForecast";
 
 function Weather(props) {
   const [weatherInfo, setWeatherInfo] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
   function getResponse(response) {
-    console.log(response.data);
     setWeatherInfo({
       ready: true,
       temperature: response.data.temperature.current,
@@ -17,6 +17,7 @@ function Weather(props) {
       iconUrl: response.data.condition.icon_url,
       city: response.data.city,
       date: new Date(response.data.time * 1000),
+      coordinates: response.data.coordinates,
     });
   }
 
@@ -59,8 +60,12 @@ function Weather(props) {
           </div>
         </form>
         <WeatherMain data={weatherInfo} />
-
         <hr />
+        <div className="WeeklyHeader">This Week's Weather Forecast</div>
+        <WeatherForecast
+          coordinates={weatherInfo.coordinates}
+          city={weatherInfo.city}
+        />
       </div>
     );
   } else {
